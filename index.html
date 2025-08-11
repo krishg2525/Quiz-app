@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Instant Quiz App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>QuickQuiz</h1>
+        <div id="meta">
+          <span id="progress">Question 0 / 0</span>
+          <span id="score">Score: 0</span>
+        </div>
+      </header>
+
+      <section id="quiz-card" class="card hidden">
+        <div id="question-area">
+          <h2 id="question-text"></h2>
+          <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+
+        <div class="controls">
+          <button id="next-btn" class="btn" disabled>Next</button>
+          <button id="skip-btn" class="btn ghost">Skip</button>
+        </div>
+      </section>
+
+      <section id="start-card" class="card">
+        <p>
+          Ready to start the quiz? Questions load dynamically from a file (or
+          fallback).
+        </p>
+        <div class="controls">
+          <button id="start-btn" class="btn primary">Start Quiz</button>
+        </div>
+      </section>
+
+      <section id="result-card" class="card hidden">
+        <h2>Results</h2>
+        <p id="result-text"></p>
+        <div id="breakdown"></div>
+        <div class="controls">
+          <button id="retry-btn" class="btn">Retry</button>
+          <button id="start-over-btn" class="btn ghost">Back to Start</button>
+        </div>
+      </section>
+
+      <footer class="muted">
+        Built with plain JavaScript • Instant feedback & dynamic loading
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
